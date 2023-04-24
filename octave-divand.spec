@@ -1,25 +1,26 @@
-%define octpkg divand
+%global octpkg divand
 
 Summary:	Functions for n-dimensional variational analysis with Octave
-Name:		octave-%{octpkg}
+Name:		octave-divand
 Version:	1.1.2
-Release:	1
-Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
+Release:	2
 License:	GPLv2+
 Group:		Sciences/Mathematics
-Url:		https://packages.octave.org/%{octpkg}/
-BuildArch:	noarch
+Url:		https://packages.octave.org/divand/
+Source0:	https://downloads.sourceforge.net/octave/divand-%{version}.tar.gz
 
-BuildRequires:	octave-devel >= 3.4.0
+BuildRequires:  octave-devel >= 3.4.0
 
 Requires:	octave(api) = %{octave_api}
 
 Requires(post): octave
 Requires(postun): octave
 
+BuildArch:	noarch
+
 %description
-divand performs an n-dimensional variational analysis (interpolation) of
-arbitrarily located observations with Octave.
+Performs an n-dimensional variational analysis (interpolation) of
+arbitrarily located observations.
 
 %files
 %license COPYING
@@ -31,9 +32,6 @@ arbitrarily located observations with Octave.
 
 %prep
 %autosetup -p1 -n %{octpkg}
-
-# remove backup files
-#find . -name \*~ -delete
 
 %build
 %octave_pkg_build
