@@ -3,7 +3,7 @@
 Summary:	Functions for n-dimensional variational analysis with Octave
 Name:		octave-divand
 Version:	1.1.2
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		Sciences/Mathematics
 Url:		https://packages.octave.org/divand/
